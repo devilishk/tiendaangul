@@ -1,0 +1,18 @@
+<body ng-controller="StoreController as store">
+      <div class="maina">
+          <h1>Tienda de Gemas</h1>
+          <h2>-Angular store-</h2>
+        <section class="section_a" style="max-width:100%;height:auto;">
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="product in store.products">
+              <h3 ng-include="'product.html'">
+                {{product.name}}
+                <em class="pull-right">${{product.price}}</em>
+              </h3>
+              <product-panels>
+              </product-panels>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </body> 
